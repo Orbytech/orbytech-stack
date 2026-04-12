@@ -1,0 +1,73 @@
+{
+  "name": "@orbytech/ui",
+  "version": "0.1.0",
+  "description": "Shared UI components for OrbyTech applications",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/styles.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "npm run build:lib && npm run build:storybook",
+    "build:lib": "tsc && npm run build:css",
+    "build:css": "tailwindcss -i ./src/styles/globals.css -o ./dist/styles.css --minify",
+    "build:storybook": "storybook build -o dist-storybook",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "storybook": "storybook dev -p 6006"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.1",
+    "lucide-react": "^0.323.0",
+    "framer-motion": "^11.0.3",
+    "react-hot-toast": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/addon-links": "^7.6.17",
+    "@storybook/blocks": "^7.6.17",
+    "@storybook/react": "^7.6.17",
+    "@storybook/react-vite": "^7.6.17",
+    "@storybook/test": "^7.6.17",
+    "@types/node": "^20.11.17",
+    "@types/jest": "^29.5.12",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "storybook": "^7.6.17",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/user-event": "^14.5.2"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

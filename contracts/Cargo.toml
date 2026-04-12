@@ -1,0 +1,24 @@
+[workspace]
+resolver = "2"
+members = [
+    "payments",
+    "streaming",
+]
+
+[workspace.dependencies]
+soroban-sdk = "20.0.0"
+soroban-sdk-macros = "20.0.0"
+
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
+
+[profile.release-with-overflow]
+inherits = "release"
+overflow-checks = true

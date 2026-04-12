@@ -1,0 +1,22 @@
+[package]
+name = "orbytech-payments"
+version = "0.1.0"
+edition = "2021"
+authors = ["OrbyTech Team"]
+description = "Stellar Soroban payment smart contracts"
+license = "MIT"
+repository = "https://github.com/orbytech/orbytech-stack"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+soroban-sdk = { workspace = true }
+soroban-sdk-macros = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+
+[features]
+default = []
+testutils = ["soroban-sdk/testutils"]

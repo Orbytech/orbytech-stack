@@ -1,0 +1,18 @@
+{
+  "name": "@orbytech/contracts-streaming",
+  "version": "0.1.0",
+  "description": "Stellar Soroban streaming payment smart contracts",
+  "scripts": {
+    "build": "soroban contract build",
+    "test": "soroban contract test",
+    "deploy": "soroban contract deploy",
+    "clean": "rm -rf target"
+  },
+  "dependencies": {
+    "soroban-sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript": "^5.3.3"
+  }
+}

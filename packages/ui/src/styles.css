@@ -1,0 +1,77 @@
+/* Base styles for OrbyTech UI components */
+
+.orbytech-button {
+  @apply inline-flex items-center justify-center rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.orbytech-button-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+}
+
+.orbytech-button-secondary {
+  @apply bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500;
+}
+
+.orbytech-button-outline {
+  @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500;
+}
+
+.orbytech-button-ghost {
+  @apply text-gray-700 hover:bg-gray-100 focus:ring-gray-500;
+}
+
+.orbytech-button-sm {
+  @apply px-3 py-1.5 text-sm;
+}
+
+.orbytech-button-md {
+  @apply px-4 py-2 text-base;
+}
+
+.orbytech-button-lg {
+  @apply px-6 py-3 text-lg;
+}
+
+.orbytech-input {
+  @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm;
+}
+
+.orbytech-input-error {
+  @apply border-red-300 focus:border-red-500 focus:ring-red-500;
+}
+
+.orbytech-input-disabled {
+  @apply bg-gray-100 cursor-not-allowed;
+}
+
+.orbytech-card {
+  @apply bg-white shadow rounded-lg;
+}
+
+.orbytech-modal-overlay {
+  @apply fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50 flex items-center justify-center p-4;
+}
+
+.orbytech-modal-content {
+  @apply bg-white rounded-lg max-w-md w-full;
+}
+
+.orbytech-toast {
+  @apply fixed top-4 right-4 z-50 p-4 rounded-md shadow-lg;
+}
+
+.orbytech-toast-success {
+  @apply bg-green-500 text-white;
+}
+
+.orbytech-toast-error {
+  @apply bg-red-500 text-white;
+}
+
+.orbytech-toast-warning {
+  @apply bg-yellow-500 text-black;
+}
+
+.orbytech-toast-info {
+  @apply bg-blue-500 text-white;
+}
