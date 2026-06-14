@@ -88,11 +88,17 @@ server.addHook('preHandler', securityHeaders);
 
 // Health check route
 server.get('/health', async (request, reply) => {
+  const memUsage = process.memoryUsage();
   return {
     status: 'ok',
     timestamp: new Date().toISOString(),
     version: '1.0.0',
     network: config.stellar.network,
+    uptime: process.uptime(),
+    memory: {
+      heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + 'MB',
+      heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + 'MB',
+    },
   };
 });
 
