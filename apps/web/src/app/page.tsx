@@ -15,12 +15,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-blue-600 rounded-lg">
-                <Rocket className="h-6 w-6 text-white" />
+              <div className="flex items-center justify-center h-12 w-12 rounded-2xl bg-blue-600 overflow-hidden">
+                <img src="/logo.svg" alt="OrbyTech logo" className="h-full w-full object-cover" />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-gray-900">OrbyTech Stack</h1>
-                <p className="text-xs text-gray-500">Stellar Payment Dashboard</p>
+                <p className="text-xs text-gray-500">Stellar payment tools, dashboard, and wallet utilities</p>
               </div>
             </div>
             
