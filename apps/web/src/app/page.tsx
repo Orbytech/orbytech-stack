@@ -4,6 +4,7 @@ import { WalletConnect } from '@/components/WalletConnect';
 import { WalletBalance } from '@/components/WalletBalance';
 import { SendPayment } from '@/components/SendPayment';
 import { TransactionHistory } from '@/components/TransactionHistory';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { Rocket, Zap, Shield, Globe } from 'lucide-react';
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
                 <Shield className="h-4 w-4" />
                 <span>Testnet</span>
               </div>
+              <ThemeToggle />
               <WalletConnect />
             </div>
           </div>
