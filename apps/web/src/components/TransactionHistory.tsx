@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useStellar } from '@/hooks/useStellar';
+import { stellarService } from '@/services/stellar.service';
 import { Card, Button, Toast } from '@orbytech/ui';
 import { 
   ArrowUpRight, 

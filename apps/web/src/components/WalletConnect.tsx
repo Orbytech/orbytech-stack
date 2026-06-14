@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import { useStellar } from '@/hooks/useStellar';
+import { stellarService } from '@/services/stellar.service';
 import { Button, Input, Modal, Toast } from '@orbytech/ui';
 import { Copy, Wallet, AlertCircle, CheckCircle, ExternalLink } from 'lucide-react';
-import { formatAddress, copyToClipboard, validateStellarAddress } from '@/lib/utils';
+import { formatAddress, copyToClipboard, validateStellarAddress, validateStellarSecretKey } from '@/lib/utils';
 
 interface WalletConnectProps {
   className?: string;
@@ -38,7 +39,7 @@ export function WalletConnect({ className }: WalletConnectProps) {
       return;
     }
 
-    if (!validateStellarAddress(secretKey.trim())) {
+    if (!validateStellarSecretKey(secretKey.trim())) {
       showToast('Invalid secret key format', 'error');
       return;
     }

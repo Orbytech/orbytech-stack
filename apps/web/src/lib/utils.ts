@@ -67,6 +67,10 @@ export function validateStellarAddress(address: string): boolean {
   return /^[G][A-Z0-9]{55}$/.test(address);
 }
 
+export function validateStellarSecretKey(secretKey: string): boolean {
+  return /^[S][A-Z0-9]{55}$/.test(secretKey);
+}
+
 export function validateAmount(amount: string): boolean {
   const num = parseFloat(amount);
   return !isNaN(num) && num > 0 && num <= 1000000; // Max 1M XLM

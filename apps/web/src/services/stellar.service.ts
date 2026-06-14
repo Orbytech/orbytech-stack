@@ -254,6 +254,15 @@ class StellarService {
     }
   }
 
+  validateSecretKey(secretKey: string): boolean {
+    try {
+      Keypair.fromSecret(secretKey);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
   /**
    * Parse asset from string
    */
