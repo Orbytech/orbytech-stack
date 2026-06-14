@@ -15,7 +15,8 @@
       "@/routes/*": ["./src/routes/*"],
       "@/utils/*": ["./src/utils/*"],
       "@/types/*": ["./src/types/*"],
-      "@/middleware/*": ["./src/middleware/*"]
+      "@/middleware/*": ["./src/middleware/*"],
+      "@orbytech/sdk": ["../../packages/sdk/src"]
     }
   },
   "include": [

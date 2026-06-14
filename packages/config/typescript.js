@@ -21,6 +21,10 @@ module.exports = {
     sourceMap: true,
     composite: true,
     incremental: true,
+    paths: {
+      '@orbytech/sdk': ['../../packages/sdk/src'],
+      '@orbytech/ui': ['../../packages/ui/src'],
+    },
   },
   include: ['src/**/*'],
   exclude: ['node_modules', 'dist', 'build'],

@@ -20,7 +20,9 @@
       "@/styles/*": ["./src/styles/*"],
       "@/utils/*": ["./src/utils/*"],
       "@/hooks/*": ["./src/hooks/*"],
-      "@/types/*": ["./src/types/*"]
+      "@/types/*": ["./src/types/*"],
+      "@orbytech/sdk": ["../../packages/sdk/src"],
+      "@orbytech/ui": ["../../packages/ui/src"]
     }
   },
   "include": [
