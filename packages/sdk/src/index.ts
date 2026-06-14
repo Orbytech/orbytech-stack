@@ -2,6 +2,7 @@
 export * from './stellar';
 export * from './types';
 export * from './streaming';
+export * from './price';
 
 // Export main classes and functions
 export { WalletManager, createWallet, createWalletFromSecret, getWalletInfo, getBalance, fundTestnetWallet, validateAddress, validateSecretKey } from './wallet';
