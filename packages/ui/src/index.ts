@@ -7,6 +7,7 @@ export { Toast } from './components/Toast';
 export { Badge } from './components/Badge';
 export { Spinner } from './components/Spinner';
 export { Tooltip } from './components/Tooltip';
+export { DataTable } from './components/DataTable';
 
 // Export component types
 export type { ButtonProps } from './components/Button';
@@ -17,6 +18,7 @@ export type { ToastProps } from './components/Toast';
 export type { BadgeProps, BadgeVariant } from './components/Badge';
 export type { SpinnerProps } from './components/Spinner';
 export type { TooltipProps } from './components/Tooltip';
+export type { DataTableProps, Column } from './components/DataTable';
 
 // Export utilities
 export * from './lib/utils';
