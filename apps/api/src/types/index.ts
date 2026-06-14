@@ -29,6 +29,7 @@ export interface PaymentResponse {
   amount: string;
   asset: string;
   memo?: string;
+  transactionXDR?: string;
 }
 
 export interface WalletCreateResponse {

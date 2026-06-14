@@ -43,9 +43,15 @@ export class PaymentController {
 
       const payment = await this.stellarService.sendPayment(paymentData);
 
+      // Return any transaction XDR created by the service for client signing
+      const responseData: PaymentResponse = {
+        ...payment,
+        transactionXDR: (payment as any).transactionXDR,
+      };
+
       const response: ApiResponse<PaymentResponse> = {
         success: true,
-        data: payment,
+        data: responseData,
         timestamp: new Date(),
       };
 
