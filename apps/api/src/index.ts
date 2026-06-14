@@ -8,6 +8,7 @@ import { config } from './config';
 import { walletRoutes } from './routes/wallet.routes';
 import { paymentRoutes } from './routes/payment.routes';
 import { statsRoutes } from './routes/stats.routes';
+import { streamingRoutes } from './routes/streaming.routes';
 import { errorHandler } from './middleware/error.middleware';
 import { requestLogger, rateLimiter, securityHeaders } from './middleware/request.middleware';
 
@@ -114,6 +115,7 @@ server.register(async function (fastify) {
   fastify.register(walletRoutes, { prefix: '/api/v1' });
   fastify.register(paymentRoutes, { prefix: '/api/v1' });
   fastify.register(statsRoutes, { prefix: '/api/v1' });
+  fastify.register(streamingRoutes, { prefix: '/api/v1' });
 });
 
 // 404 handler
